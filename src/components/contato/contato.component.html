@@ -1,0 +1,25 @@
+
+<div class="container">
+    <mat-card>
+        <mat-card-title>Entre em Contato:</mat-card-title>
+        <mat-card-content>
+            <form class="contact-form">
+                <mat-form-field>
+                    <mat-label>Nome</mat-label>
+                    <input matInput placeholder="informe um nome">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input type="email" placeholder="Informe um Email" matInput>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Mensagem</mat-label>
+                    <textarea matInput placeholder="Mensagem"> </textarea>
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="openSnackBar('Formulario enviado', 'Ok')"> Enviar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

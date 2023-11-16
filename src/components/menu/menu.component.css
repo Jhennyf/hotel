@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #2c3855;
+    --primary-color-dark: #435681;
+    --text-dark: #333333;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link a {
+    font-weight: 500;
+    color: var(--extra-ligth);
+    transition: 0.3s;
+}
+
+.link a:hover {
+    color: var(--primary-color);
+}
+h1, p{
+    color: black;
+}
+nav, ul{
+    display:  flex;
+    flex-direction: row;
+}
+
+li{
+    padding: 0 20px;
+}
+
+h1{
+    margin: 0;
+    padding: 10px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 36px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+li:hover,
+h1:hover,
+button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+}
+button:focus ~ul{
+    height: 260px;
+}
+
+@media (max-width:768px) {
+    nav, ul{
+        flex-direction: column;
+    }
+    ul{
+        text-align: center;
+        margin: 0;
+        height: 0;
+    }
+    nav{
+        padding-top: 0px;
+        align-items: flex-start;
+    }
+    h1{
+        margin: 10px;
+    }
+    button{
+        display: flex;
+    }
+    ul,li{
+        width: 100%;
+    }
+}
